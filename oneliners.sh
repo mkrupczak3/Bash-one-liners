@@ -14,3 +14,30 @@ find . -type f -not -path '*/\.*' -exec grep -Il '.' {} \; | xargs awk 'FNR==1{p
 # Convert images from one format to another with multithreaded processing
 # https://drewlustro.com/blog/batch-convert-raw-images-to-jpeg-with-imagemagick-in-parallel
 find . -type f -iname '*.ARW' -print0 | xargs -0 -n 1 -P 4 -I {} convert -verbose -units PixelsPerInch {} -colorspace sRGB -resize 2560x2650 -set filename:new '%t-%wx%h' -density 72 -format JPG -quality 80 '%[filename:new].jpg'
+
+# Download a file using multiple connections for faster downloading
+# https://stackoverflow.com/a/24444698
+aria2c -x 16 -s 16 [url]
+#          |    |
+#          |    |
+#          |    |
+#          ---------> the number of connections here
+
+# Download from a torrent magnet link
+aria2c 'magnet:?xt=urn:btih:248D0A1CD08284299DE78D5C1ED359BB46717D8C'
+
+# Download from a torrent file
+aria2c http://example.org/mylinux.torrent
+
+# Download URI's found in a text file
+aria2c -i uris.txt
+
+# test internet connection speed from command line
+speedtest-cli
+
+# see the available space on  mounted file-systems in human-readable printout
+df -h
+
+# Look through a system and see where space is being used
+ncdu /
+
