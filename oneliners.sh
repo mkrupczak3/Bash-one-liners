@@ -41,3 +41,16 @@ df -h
 # Look through a system and see where space is being used
 ncdu /
 
+# Check graphics cards
+lspci -k | grep -A 2 -i "VGA"
+
+# Switch to using integrated graphics on a linux laptop with nvidia x server installed
+# https://www.linuxbabe.com/desktop-linux/switch-intel-nvidia-graphics-card-ubuntu
+sudo prime-select intel
+
+# Switch to using nvidia graphics on a linux laptop with nvidia x server installed (for games, ML, etc.)
+sudo prime-select nvidia
+
+# query which graphics device is active
+prime-select query
+
