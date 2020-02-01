@@ -54,3 +54,6 @@ sudo prime-select nvidia
 # query which graphics device is active
 prime-select query
 
+# download a YouTube video and convert the format to mp3
+youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
+
