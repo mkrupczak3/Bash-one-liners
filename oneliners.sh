@@ -31,6 +31,12 @@ aria2c http://example.org/mylinux.torrent
 
 # Download URI's found in a text file
 aria2c -i uris.txt
+# Download all songs on a remote playlist text file
+aria2c -i example.com/fire_mixtape.m3u
+
+wget -i uris.txt
+# Download all songs on a remote playlist text file
+wget -i example.com/fire_mixtape.m3u
 
 # test internet connection speed from command line
 speedtest-cli
