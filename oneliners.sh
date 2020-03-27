@@ -67,5 +67,13 @@ glxinfo|egrep "OpenGL vendor|OpenGL renderer*"
 # download a YouTube video and convert the format to mp3
 youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
 
+# Check GPU usage of NVIDIA card:
+# Setup
+#     http://blog.datumbox.com/getting-the-gpu-usage-of-nvidia-cards-with-the-linux-dstat-tool/
+# sudo apt-get install dstat #install dstat
+# sudo pip install nvidia-ml-py #install Python NVIDIA Management Library
+# wget https://raw.githubusercontent.com/datumbox/dstat/master/plugins/dstat_nvidia_gpu.py
+# sudo mv dstat_nvidia_gpu.py /usr/share/dstat/ #move file to the plugins directory of dstat
+dstat -a --nvidia-gpu
 
 
