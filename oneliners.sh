@@ -57,9 +57,15 @@ sudo prime-select intel
 # Switch to using nvidia graphics on a linux laptop with nvidia x server installed (for games, ML, etc.)
 sudo prime-select nvidia
 
-# query which graphics device is active
+# query which graphics device is active (is a liar sometimes, rquires log out and in to apply)
 prime-select query
+
+# Query which graphics device is active (i.e. games would actually use)
+# Important when used to figure out if either Intel or Nvidia card is actually active
+glxinfo|egrep "OpenGL vendor|OpenGL renderer*"
 
 # download a YouTube video and convert the format to mp3
 youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
+
+
 
