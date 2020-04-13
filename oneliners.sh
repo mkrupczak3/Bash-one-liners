@@ -90,7 +90,8 @@ redshift -l 4.65:-74.06 -t 6471:3600 -g 0.8 -m randr -v &
 # As an aside, this is a perfect example of why I would never recommend Linux or even Ubuntu to a normal human being. 
 # It just isn't designed for usability, and the contract with users
 # (I do something -> it is supposed to actually work [dammit!]) even with the simplest GUI
-# apps clearly doesn't even exist on this platform
+# apps clearly doesn't even exist on this platform. Never mind trying to convince your grandma to 
+# try to mess with all this s*** on the command line.
 #
 # This unfortunately has been painfully demonstrated to me time and time again.
 
