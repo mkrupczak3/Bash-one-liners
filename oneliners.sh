@@ -76,11 +76,12 @@ youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://ww
 # sudo mv dstat_nvidia_gpu.py /usr/share/dstat/ #move file to the plugins directory of dstat
 dstat -a --nvidia-gpu
 
-
-# Start the redshift display dimming service, providing it a longitude and latitude manually
+# Issue I've run into MULTIPLE times, very frustrating for something so stupid
+#
+# Start the redshift night-time blue light removal / display dimming service, providing it a longitude and latitude manually
 # Since apparently these garbage-tier developers can't be bothered to get some of the most BASIC
 # software on the planet to work on an esoteric system such as, I don't know UBUNTU 18.04 LONG TERM SUPPORT (WTF?)
 #
-#https://github.com/jonls/redshift/issues/445
+# https://github.com/jonls/redshift/issues/445
 redshift -l 4.65:-74.06 -t 5700:3600 -g 0.8 -m randr -v &
 
