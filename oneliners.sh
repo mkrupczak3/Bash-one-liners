@@ -91,3 +91,8 @@ redshift -l 4.65:-74.06 -t 6471:3600 -g 0.8 -m randr -v &
 # (I do something -> it is supposed to actually work [dammit!]) clearly doesn't even exist on this platform
 # This unfortunately has been painfully demonstrated to me time and time again.
 
+
+# Ubuntu Start a daemon at startup:
+update-rc.d service_name defaults
+# Ubuntu remove a daemon from startup:
+update-rc.d -f service_name remove
