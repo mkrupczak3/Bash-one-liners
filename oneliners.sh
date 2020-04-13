@@ -83,5 +83,7 @@ dstat -a --nvidia-gpu
 # software on the planet to work on an esoteric system such as, I don't know UBUNTU 18.04 LONG TERM SUPPORT (WTF?)
 #
 # https://github.com/jonls/redshift/issues/445
-redshift -l 4.65:-74.06 -t 5700:3600 -g 0.8 -m randr -v &
+#
+# https://manpages.ubuntu.com/manpages/trusty/man5/redshift.5.html
+redshift -l 4.65:-74.06 -t 6471:3600 -g 0.8 -m randr -v &
 
