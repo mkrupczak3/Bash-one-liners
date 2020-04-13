@@ -80,5 +80,7 @@ dstat -a --nvidia-gpu
 # Start the redshift display dimming service, providing it a longitude and latitude manually
 # Since apparently these garbage-tier developers can't be bothered to get some of the most BASIC
 # software on the planet to work on an esoteric system such as, I don't know UBUNTU 18.04 LONG TERM SUPPORT (WTF?)
+#
+#https://github.com/jonls/redshift/issues/445
 redshift -l 4.65:-74.06 -t 5700:3600 -g 0.8 -m randr -v &
 
