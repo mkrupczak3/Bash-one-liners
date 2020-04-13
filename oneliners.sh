@@ -85,6 +85,7 @@ dstat -a --nvidia-gpu
 # https://github.com/jonls/redshift/issues/445
 #
 # https://manpages.ubuntu.com/manpages/trusty/man5/redshift.5.html
+# @TODO change 6471 to the correct daytime color temperature (no modification/redshift)
 redshift -l 4.65:-74.06 -t 6471:3600 -g 0.8 -m randr -v &
 # As an aside, this is a perfect example of why I would never recommend Linux or even Ubuntu to a normal human being. 
 # It just isn't designed for usability, and the contract with users
