@@ -102,3 +102,6 @@ redshift -l 4.65:-74.06 -t 6471:3600 -g 0.8 -m randr -v &
 update-rc.d service_name defaults
 # Ubuntu remove a daemon from startup:
 update-rc.d -f service_name remove
+
+#Check if a specific port or range of ports (TCP and or UDP) is/are open using nmap
+-p U:53,111,137,T:21-25,80,139,8080
