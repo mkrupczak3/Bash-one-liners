@@ -104,4 +104,12 @@ update-rc.d service_name defaults
 update-rc.d -f service_name remove
 
 #Check if a specific port or range of ports (TCP and or UDP) is/are open using nmap
--p U:53,111,137,T:21-25,80,139,8080
+nmap -p U:53,111,137,T:21-25,80,139,8080
+
+#List devices mounted to a linux machine (e.g. ssd on sda, thumbdrive on sdd, ...)
+## https://linuxhandbook.com/linux-list-disks/
+sudo parted -l
+
+# From a given disk device, mount it to filesystem:
+## mount [OPTION/S] DEVICE_NAME DIRECTORY_NAME
+mount -t ext4 /dev/sdb1 /mnt/media
