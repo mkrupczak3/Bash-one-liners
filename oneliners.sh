@@ -67,6 +67,10 @@ glxinfo|egrep "OpenGL vendor|OpenGL renderer*"
 # download a YouTube video and convert the format to mp3
 youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
 
+# Use ffmpeg to encode an audio file with an image as a video file for use with Youtube
+# # https://superuser.com/questions/700419/how-to-convert-mp3-to-youtube-allowed-video-format
+ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 output.mp4
+
 # Check GPU usage of NVIDIA card:
 # Setup
 #     http://blog.datumbox.com/getting-the-gpu-usage-of-nvidia-cards-with-the-linux-dstat-tool/
