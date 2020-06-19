@@ -102,7 +102,7 @@ redshift -l 4.65:-74.06 -t 6471:3600 -g 0.8 -m randr -v &
 # This unfortunately has been painfully demonstrated to me time and time again.
 #
 # Edit: I'm an idiot
-#    Your grandma's and snot-nosed nephew who wants to play Minecraft can
+#    Your grandma and snot-nosed nephew who wants to play Minecraft can
 #    both dim their dispaly at night with their sanity intact easily on
 #    Ubuntu using the night light setting:
 # https://www.omgubuntu.co.uk/2017/10/enable-night-light-mode-on-ubuntu
