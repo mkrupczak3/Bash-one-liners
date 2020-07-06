@@ -38,6 +38,12 @@ wget -i uris.txt
 # Download all songs on a remote playlist text file
 wget -i example.com/fire_mixtape.m3u
 
+#Unzip a folder
+uznip bla.zip
+
+#Unrar a rar archive
+unrar x Starbound\ 1.2.2.rar
+
 # test internet connection speed from command line
 speedtest-cli
 
