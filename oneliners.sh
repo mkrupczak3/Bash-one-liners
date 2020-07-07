@@ -50,6 +50,9 @@ speedtest-cli
 # Terminal window with the date and ping time to Cloudfare DNS (1.1.1.1) every 1s
 ping 1.1.1.1 | while read line; do clear && echo `date` - $line; done
 
+# Have a random cow say a random thing
+watch -n 10 fortune | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf -n1)
+
 # see the available space on  mounted file-systems in human-readable printout
 df -h
 
