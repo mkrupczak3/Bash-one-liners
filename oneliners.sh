@@ -47,6 +47,9 @@ unrar x Starbound\ 1.2.2.rar
 # test internet connection speed from command line
 speedtest-cli
 
+# Terminal window with the date and ping time to Cloudfare DNS (1.1.1.1) every 1s
+ping 1.1.1.1 | while read line; do clear && echo `date` - $line; done
+
 # see the available space on  mounted file-systems in human-readable printout
 df -h
 
