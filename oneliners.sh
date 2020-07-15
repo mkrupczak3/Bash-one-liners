@@ -29,6 +29,10 @@ aria2c 'magnet:?xt=urn:btih:248D0A1CD08284299DE78D5C1ED359BB46717D8C'
 # Download from a torrent file
 aria2c http://example.org/mylinux.torrent
 
+# Download multiple things in parallel using aria2
+# https://stackoverflow.com/questions/54853223/download-multiple-files-with-aria2c-in-parallel
+find . -iregex ".*.torrent" -print0 | parallel -0 aria2c
+
 # Download URI's found in a text file
 aria2c -i uris.txt
 # Download all songs on a remote playlist text file
