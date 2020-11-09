@@ -89,6 +89,9 @@ youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://ww
 # # https://superuser.com/questions/700419/how-to-convert-mp3-to-youtube-allowed-video-format
 ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 output.mp4
 
+# Trim an MP4 file, preserving original encoding, based on timecodes:
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -strict -2 cut.mp4
+
 # Check GPU usage of NVIDIA card:
 # Setup
 #     http://blog.datumbox.com/getting-the-gpu-usage-of-nvidia-cards-with-the-linux-dstat-tool/
