@@ -90,7 +90,8 @@ youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://ww
 ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 output.mp4
 
 # Trim an MP4 file, preserving original encoding, based on timecodes:
-ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -strict -2 cut.mp4
+# https://stackoverflow.com/a/42827058/14460558
+ ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 
 # Check GPU usage of NVIDIA card:
 # Setup
