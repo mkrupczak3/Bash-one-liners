@@ -89,7 +89,8 @@ youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://ww
 # # https://superuser.com/questions/700419/how-to-convert-mp3-to-youtube-allowed-video-format
 ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 output.mp4
 
-# Trim an MP4 file, preserving original encoding, based on timecodes:
+# Trim an MP4 video file to a subset at a certain start and end time
+#     , preserving original encoding, based on timecodes:
 # https://stackoverflow.com/a/42827058/14460558
  ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 
