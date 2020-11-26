@@ -146,3 +146,12 @@ sudo parted -l
 # From a given disk device, mount it to filesystem:
 ## mount [OPTION/S] DEVICE_NAME DIRECTORY_NAME
 mount -t ext4 /dev/sdb1 /mnt/media
+
+# Linux create a filesystem hard link
+#     creates another inode to the data on hard disk
+#     completely transparent to underlying software
+ln SOURCE TARGET
+
+# Linux create a filesystem soft link
+#     creates a symbolic link to point to another file
+ln -s SOURCE TARGET
