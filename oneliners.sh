@@ -92,6 +92,10 @@ ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 out
 # Trim an MP4 video file to a subset at a certain start and end time
 #     , preserving original encoding, based on timecodes:
 # https://stackoverflow.com/a/42827058/14460558
+# 
+# WARNING
+#     ass-backwards crap where 2nd timecode arg is the LENGTH
+#     of the desired video to be copied, NOT a timecode on the source vid! 
  ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 
 # Check GPU usage of NVIDIA card:
