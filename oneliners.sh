@@ -159,3 +159,13 @@ ln SOURCE TARGET
 # Linux create a filesystem soft link
 #     creates a symbolic link to point to another file
 ln -s SOURCE TARGET
+
+# Use DD to make a backup image of a physical disk device
+sudo dd bs=4M if=/dev/sdc of=/home/mkrupczak/Retro_Pie_BKP.img status=progress
+
+# Use DD to duplicate one drive onto another
+dd if=/dev/sda of=/dev/sdb bs=4M conv=notrunc,noerror status=progress
+
+# Use DD to retore a backup image of a drive onto a disk
+sudo dd bs=4M if=/home/mkrupczak/Retro_Pie_BKP.img of=/dev/sdc status=progress
+
