@@ -95,6 +95,9 @@ youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://ww
 #---------------------------------
 
 # Use ffmpeg to encode an audio file with an image as a video file for use with Youtube
+#     e.g.: Album cover displayed on loop while song is heard for length of video/song
+#     
+#     do not fall afoul of the RIAA or ThemTube
 # # https://superuser.com/questions/700419/how-to-convert-mp3-to-youtube-allowed-video-format
 ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 output.mp4
 
