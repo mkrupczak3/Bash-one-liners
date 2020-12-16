@@ -85,6 +85,15 @@ glxinfo|egrep "OpenGL vendor|OpenGL renderer*"
 # download a YouTube video and convert the format to mp3
 youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
 
+#---------------------------------
+# ╔═══╗ ╔═══╗╔═╗╔═╗╔═══╗╔═══╗╔═══╗
+# ║╔══╝ ║╔══╝║║╚╝║║║╔═╗║║╔══╝║╔═╗║
+# ║╚══╗ ║╚══╗║╔╗╔╗║║╚═╝║║╚══╗║║ ╚╝
+# ║╔══╝ ║╔══╝║║║║║║║╔══╝║╔══╝║║╔═╗
+#╔╝╚╗  ╔╝╚╗  ║║║║║║║║   ║╚══╗║╚╩═║
+#╚══╝  ╚══╝  ╚╝╚╝╚╝╚╝   ╚═══╝╚═══╝
+#---------------------------------
+
 # Use ffmpeg to encode an audio file with an image as a video file for use with Youtube
 # # https://superuser.com/questions/700419/how-to-convert-mp3-to-youtube-allowed-video-format
 ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 output.mp4
@@ -97,6 +106,16 @@ ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 out
 #     ass-backwards crap where 2nd timecode arg is the LENGTH
 #     of the desired video to be copied, NOT a timecode on the source vid! 
  ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
+ 
+# Upscale a video:
+#    Change threads if ur a potato or u work at NASA
+ffmpeg -i input.mp4 -threads 4 -vf scale=1920x1080:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_1080p.mp4
+
+# Downscale a video:
+#    Change threads if ur a potato or u work at NASA
+ffmpeg -i input.mp4 -threads 4 -vf scale=640x480:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_480p.mp4
+
+#---------------------------------------------------------------------------------------- 
 
 # Check GPU usage of NVIDIA card:
 # Setup
