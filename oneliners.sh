@@ -194,3 +194,11 @@ dd if=/dev/sda of=/dev/sdb bs=4M conv=notrunc,noerror status=progress
 # Use DD to retore a backup image of a drive onto a disk
 sudo dd bs=4M if=/home/mkrupczak/Retro_Pie_BKP.img of=/dev/sdc status=progress
 
+# suspend a long-running program in a shell window
+#     https://askubuntu.com/a/465834
+#
+# CTRL + Z
+# ---------------
+# Resume after suspending:
+# %
+# ---------------
