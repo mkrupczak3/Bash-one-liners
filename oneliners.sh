@@ -122,6 +122,10 @@ ffmpeg -i input.mp4 -threads 4 -vf scale=1920x1080:flags=lanczos -c:v libx264 -p
 ffmpeg -i input.mp4 -threads 4 -vf scale=640x480:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_480p.mp4
 # ================
 #---------------------------------------------------------------------------------------- 
+# Convert a Video for Twitter? (May Not Work)
+# https://gist.github.com/nikhan/26ddd9c4e99bbf209dd7
+#
+ffmpeg -i test.mov -vcodec libx264 -vf 'scale=640:trunc(ow/a/2)*2' -acodec aac -vb 1024k -minrate 1024k -maxrate 1024k -bufsize 1024k -ar 44100 -strict experimental -r 30 out.mp4
 
 # Check GPU usage of NVIDIA card:
 # Setup
