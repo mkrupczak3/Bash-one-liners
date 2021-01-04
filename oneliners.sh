@@ -125,8 +125,7 @@ ffmpeg -i input.mp4 -threads 4 -vf scale=640x480:flags=lanczos -c:v libx264 -pre
 # Convert a Video for Twitter? (May Not Work)
 # https://gist.github.com/nikhan/26ddd9c4e99bbf209dd7
 #
-ffmpeg -i test.mov -vcodec libx264 -vf 'scale=640:trunc(ow/a/2)*2' -acodec aac -vb 1024k -minrate 1024k -maxrate 1024k -bufsize 1024k -ar 44100 -strict experimental -r 30 out.mp4
-
+ffmpeg -i in.mkv -pix_fmt yuv420p -vcodec libx264 -vf scale=640:-1 -acodec aac -vb 1024k -minrate 1024k -maxrate 1024k -bufsize 1024k -ar 44100  -ac 2  -strict experimental -r 30  out.mp4
 # Check GPU usage of NVIDIA card:
 # Setup
 #     http://blog.datumbox.com/getting-the-gpu-usage-of-nvidia-cards-with-the-linux-dstat-tool/
