@@ -180,6 +180,11 @@ sudo parted -l
 ## mount [OPTION/S] DEVICE_NAME DIRECTORY_NAME
 mount -t ext4 /dev/sdb1 /mnt/media
 
+# Use mkdosfs to format a thumb drive as FAT32
+#     Legacy filesystem necessary for use with many devices
+#     Use 'sudo fdisk -l' to find correct device name
+sudo umount /dev/sdc1 && sudo mkdosfs -F 32 -I /dev/sdc1
+
 # Linux create a filesystem hard link
 #     creates another inode to the data on hard disk
 #     completely transparent to underlying software
