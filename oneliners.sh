@@ -25,6 +25,9 @@ find . -type f -iname '*.JPG' -print0 | xargs -0 -n 1 -P 4 -I {} convert -verbos
 
 # Download a file using multiple connections for faster downloading
 # https://stackoverflow.com/a/24444698
+# ----
+# TCP multiplexing allows for fast downloads even on a congested connection
+#     Trust me, I once took a networking class
 aria2c -x 16 -s 16 [url]
 #          |    |
 #          |    |
