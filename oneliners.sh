@@ -21,7 +21,7 @@ find . -type f -iname '*.ARW' -print0 | xargs -0 -n 1 -P 4 -I {} convert -verbos
 # Batch convert Steam uncompressed PNG videogame screenshots to high-quality low compression JPG for use with twitter:
 find . -type f -iname '286690*.png' -print0 | xargs -0 -n 1 -P 4 -I {} convert -verbose -units PixelsPerInch {} -colorspace sRGB -resize 3840x2160 -set filename:new '%t-%wx%h' -density 72 -format JPG -quality 97 '%[filename:new].jpg'
 # Convert images to the maximum quality allowed by twitter. Res preserves aspect ratio of 3:2 from Nikon D3500
-find . -type f -iname '*.JPG' -print0 | xargs -0 -n 1 -P 4 -I {} convert -verbose -units PixelsPerInch {} -colorspace sRGB -resize 4096x2731 -set filename:new '%t-%wx%h' -density 72 -format JPG -quality 97 '%[filename:new].jpg'
+find . -type f -iname '*.JPG' -print0 | xargs -0 -n 1 -P 4 -I {} convert -verbose -units PixelsPerInch {} -colorspace sRGB -resize 4096x2731 -set filename:new '%t-%wx%h' -density 72 -format JPG -quality 95 '%[filename:new].jpg'
 
 # Download a file using multiple connections for faster downloading
 # https://stackoverflow.com/a/24444698
