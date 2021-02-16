@@ -114,17 +114,17 @@ ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -strict -2 -c copy cut.mp4
 # ===============
 # Upscale a video:
 #    Change threads if ur a potato or u work at NASA
-ffmpeg -i input.mp4 -threads 4 -vf scale=1920x1080:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_1080p.mp4
+ffmpeg -i input.mp4 -strict -2 -max_muxing_queue_size 9999 -threads 4 -vf scale=1920x1080:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_1080p.mp4
 # ================
 # Downscale a video:
 #    Change threads if ur a potato or u work at NASA
-ffmpeg -i input.mp4 -threads 4 -vf scale=640x480:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_480p.mp4
+ffmpeg -i input.mp4 -strict -2 -max_muxing_queue_size 9999 -threads 4 -vf scale=640x480:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress_480p.mp4
 # ================
 #---------------------------------------------------------------------------------------- 
 # Convert a Video for Twitter? (May Not Work)
 # https://gist.github.com/nikhan/26ddd9c4e99bbf209dd7
 #
-ffmpeg -i test.mov -vcodec libx264 -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -pix_fmt yuv420p -strict experimental -r 30 -t 2:20 -acodec aac -vb 1024k -minrate 1024k -maxrate 1024k -bufsize 1024k -ar 44100 -ac 2 out.mp4
+ffmpeg -i test.mov -strict -2 -max_muxing_queue_size 9999 -vcodec libx264 -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -pix_fmt yuv420p -strict experimental -r 30 -t 2:20 -acodec aac -vb 1024k -minrate 1024k -maxrate 1024k -bufsize 1024k -ar 44100 -ac 2 out.mp4
 
 # Check GPU usage of NVIDIA card:
 # Setup
