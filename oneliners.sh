@@ -108,7 +108,7 @@ ffmpeg -loop 1 -r 1 -i pic.jpg -i audio.mp3 -c:a copy -shortest -c:v libx264 out
 # WARNING
 #     ass-backwards crap where 2nd timecode arg is the LENGTH
 #     of the desired video to be copied, NOT a timecode on the source vid! 
-ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -c copy cut.mp4 
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 -strict -2 -c copy cut.mp4 
 # Vid scaling
 #     https://write.corbpie.com/upscaling-and-downscaling-video-with-ffmpeg/
 # ===============
