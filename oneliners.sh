@@ -91,6 +91,11 @@ prime-select query
 # Important when used to figure out if either Intel or Nvidia card is actually active
 glxinfo|egrep "OpenGL vendor|OpenGL renderer*"
 
+# PACKAGE MANAGEMENT
+# diagnose weird Java runtime issues
+# https://stackoverflow.com/q/53090590/14460558
+update-alternatives --display java
+
 # download a YouTube video and convert the format to mp3
 youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
 
