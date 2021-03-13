@@ -59,6 +59,20 @@ uznip bla.zip
 #Unrar a rar archive
 unrar x Starbound\ 1.2.2.rar
 
+# Remotely SYNC two directories, smarter than scp and easier than creating a tar
+rsync -rtvP --bwlimit=512 [source] [destination] 
+
+# [source] [destination] e.g. myuser@remotemachine.com:/mixtapes /home/localuser/mixtapebkp
+# Where
+#
+# -r is recursive
+# -t retains the files' modification time
+# -v to show what is going on
+# -P shows the progress
+# --bwlimit=512 limits the upload to 512Kb/sec, ~= 4.1 mbps
+# 
+# If interrupted, just run the command again and it will pickup where it left off
+
 # test internet connection speed from command line
 speedtest-cli
 
