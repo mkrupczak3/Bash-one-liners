@@ -238,3 +238,6 @@ sudo dd bs=4M if=/home/mkrupczak/Retro_Pie_BKP.img of=/dev/sdc status=progress
 # Resume after suspending:
 # %
 # ---------------
+
+# Figure out what my IP looks like to other people 
+curl ifconfig.me
