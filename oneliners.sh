@@ -212,6 +212,19 @@ mount -t ext4 /dev/sdb1 /mnt/media
 #     Use 'sudo fdisk -l' to find correct device name
 sudo umount /dev/sdc1 && sudo mkdosfs -F 32 -I /dev/sdc1
 
+# SMARTCTL HDD Health
+# -------------------
+#   Automated montly test and report:
+#   https://brismuth.com/scheduling-automated-storage-health-checks-d470b4283e3e
+# ----
+#   run a short test on a disk
+smartctl -t short /dev/sda
+#   Human readable health of a disk
+smartctl -H /dev/sda 
+#   All info of a disk, including results of all tests
+smartctl -a /dev/sda
+
+
 # Linux create a filesystem hard link
 #     creates another inode to the data on hard disk
 #     completely transparent to underlying software
@@ -238,6 +251,11 @@ sudo dd bs=4M if=/home/mkrupczak/Retro_Pie_BKP.img of=/dev/sdc status=progress
 # Resume after suspending:
 # %
 # ---------------
+#
+# CONTROL FLOW
+#     CTRL + S: pause scrolling of output
+#     CTRL + Q: resume scrolling of output
 
 # Figure out what my IP looks like to other people 
 curl ifconfig.me
+
