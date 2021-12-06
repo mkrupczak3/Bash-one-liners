@@ -54,7 +54,7 @@ wget -i uris.txt
 wget -i example.com/fire_mixtape.m3u
 
 #Unzip a folder
-uznip bla.zip
+unzip bla.zip
 
 #Unrar a rar archive
 unrar x Starbound\ 1.2.2.rar
@@ -111,7 +111,7 @@ glxinfo|egrep "OpenGL vendor|OpenGL renderer*"
 update-alternatives --display java
 
 # download a YouTube video and convert the format to mp3
-youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=MopniCeuWTk
+youtube-dl --restrict-filenames --ignore-errors -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 #---------------------------------
 # ╔═══╗ ╔═══╗╔═╗╔═╗╔═══╗╔═══╗╔═══╗
